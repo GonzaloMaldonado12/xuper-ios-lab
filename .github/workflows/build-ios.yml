@@ -1,0 +1,40 @@
+name: Build iPhone client (unsigned)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 25
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Compile for physical iPhone
+        run: |
+          xcodebuild -version
+          xcodebuild -project XuperStudy.xcodeproj -scheme XuperStudy -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build/device CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
+      - name: Package unsigned IPA
+        run: |
+          python3 tools/package_unsigned.py build/device/Build/Products/Release-iphoneos/XuperStudy.app artifacts/XuperStudy-unsigned.ipa
+      - name: Compile simulator app
+        run: |
+          xcodebuild -project XuperStudy.xcodeproj -scheme XuperStudy -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/simulator CODE_SIGNING_ALLOWED=NO build
+      - name: Launch on iPhone 11 simulator
+        run: |
+          mkdir -p artifacts
+          RUNTIME=$(xcrun simctl list runtimes -j | python3 -c 'import json,sys; r=[r["identifier"] for r in json.load(sys.stdin)["runtimes"] if r.get("isAvailable") and r["identifier"].endswith("iOS-18-5")]; assert r, "iOS 18.5 simulator runtime missing"; print(r[0])')
+          DEVICE=$(xcrun simctl create Xuper-iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 "$RUNTIME")
+          xcrun simctl boot "$DEVICE"
+          xcrun simctl bootstatus "$DEVICE" -b
+          xcrun simctl install "$DEVICE" build/simulator/Build/Products/Debug-iphonesimulator/XuperStudy.app
+          xcrun simctl launch "$DEVICE" local.xuper.study
+          xcrun simctl io "$DEVICE" screenshot artifacts/iphone11-launch.png
+          printf '%s\n' 'Simulator launch only; Xuper service and streaming are not connected or validated.' > artifacts/validation-scope.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Xuper-iOS-unsigned-build
+          path: artifacts/
+          retention-days: 7
+          if-no-files-found: error

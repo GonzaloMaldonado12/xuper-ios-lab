@@ -1,0 +1,7 @@
+build/
+artifacts/
+*.ipa
+*.mobileprovision
+*.p12
+xcuserdata/
+__pycache__/

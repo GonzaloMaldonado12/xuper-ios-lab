@@ -1,0 +1,29 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+FAA1F2966D6055594206CF85 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate.swift"; sourceTree = "<group>";};
+FD005CE3A4FE2D89648A6F50 = {isa = PBXBuildFile; fileRef = FAA1F2966D6055594206CF85;};
+6D0DB11F450188FDEDD91D7D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaStore.swift"; sourceTree = "<group>";};
+91C3ED6F77283A245390B344 = {isa = PBXBuildFile; fileRef = 6D0DB11F450188FDEDD91D7D;};
+68721AB0B096F524A9B42608 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views.swift"; sourceTree = "<group>";};
+0D99D4DB6ACD79E97AF4824E = {isa = PBXBuildFile; fileRef = 68721AB0B096F524A9B42608;};
+88F4CC70092473AD769F9B49 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playback.swift"; sourceTree = "<group>";};
+9340A4057832D118FE741201 = {isa = PBXBuildFile; fileRef = 88F4CC70092473AD769F9B49;};
+CD774F8C46B4685BA5E70E5A = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PrivacyInfo.xcprivacy"; sourceTree = "<group>";};
+FD57E9B16885BEBF76EEE08F = {isa = PBXBuildFile; fileRef = CD774F8C46B4685BA5E70E5A;};
+8873151C067A966D8A2B0623 = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info.plist"; sourceTree = "<group>";};
+A8792157CB4F27FB949C035F = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XuperStudy.app; sourceTree = BUILT_PRODUCTS_DIR;};
+878A52FC5FF6A57D50B7B870 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (FD005CE3A4FE2D89648A6F50,91C3ED6F77283A245390B344,0D99D4DB6ACD79E97AF4824E,9340A4057832D118FE741201); runOnlyForDeploymentPostprocessing = 0;};
+41D311A605520FC7B8B9A980 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (FD57E9B16885BEBF76EEE08F); runOnlyForDeploymentPostprocessing = 0;};
+E2AA269EB967A8853A258BFA = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+E17E80AD8E2103CF3FC3FD96 = {isa = PBXGroup; children = (FAA1F2966D6055594206CF85,6D0DB11F450188FDEDD91D7D,68721AB0B096F524A9B42608,88F4CC70092473AD769F9B49,CD774F8C46B4685BA5E70E5A,8873151C067A966D8A2B0623); path = App; sourceTree = "<group>";};
+0A3E27B8CA818264D75C8D81 = {isa = PBXGroup; children = (A8792157CB4F27FB949C035F); name = Products; sourceTree = "<group>";};
+0D6E4079E36703EBD37C0072 = {isa = PBXGroup; children = (E17E80AD8E2103CF3FC3FD96,0A3E27B8CA818264D75C8D81); sourceTree = "<group>";};
+73EBF6644258C120893E685D = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = "iphoneos"; IPHONEOS_DEPLOYMENT_TARGET = "13.0"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; SWIFT_VERSION = "5.0"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";}; name = Debug;};
+0B0C687DF8B6B8DC790B519C = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = "iphoneos"; IPHONEOS_DEPLOYMENT_TARGET = "13.0"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; SWIFT_VERSION = "5.0"; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release;};
+187B327489003FCA55B00C62 = {isa = XCConfigurationList; buildConfigurations = (73EBF6644258C120893E685D,0B0C687DF8B6B8DC790B519C); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+6C7EFF6369083C8E1F2B1994 = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_NAME = "XuperStudy"; PRODUCT_BUNDLE_IDENTIFIER = "local.xuper.study"; INFOPLIST_FILE = "App/Info.plist"; CODE_SIGN_STYLE = "Automatic"; TARGETED_DEVICE_FAMILY = "1"; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "13.0"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";}; name = Debug;};
+DD75E2CB1C510A828AC72D96 = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_NAME = "XuperStudy"; PRODUCT_BUNDLE_IDENTIFIER = "local.xuper.study"; INFOPLIST_FILE = "App/Info.plist"; CODE_SIGN_STYLE = "Automatic"; TARGETED_DEVICE_FAMILY = "1"; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "13.0"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release;};
+DA6C49DB5A7137BA75102BE3 = {isa = XCConfigurationList; buildConfigurations = (6C7EFF6369083C8E1F2B1994,DD75E2CB1C510A828AC72D96); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+34A04005BCAF206EEC990BD9 = {isa = PBXNativeTarget; buildConfigurationList = DA6C49DB5A7137BA75102BE3; buildPhases = (878A52FC5FF6A57D50B7B870,E2AA269EB967A8853A258BFA,41D311A605520FC7B8B9A980); buildRules = (); dependencies = (); name = XuperStudy; productName = XuperStudy; productReference = A8792157CB4F27FB949C035F; productType = "com.apple.product-type.application";};
+244210E48437B6556980A702 = {isa = PBXProject; attributes = {LastUpgradeCheck = 1600;}; buildConfigurationList = 187B327489003FCA55B00C62; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es,en,Base); mainGroup = 0D6E4079E36703EBD37C0072; productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (34A04005BCAF206EEC990BD9);};
+}; rootObject = 244210E48437B6556980A702; }
