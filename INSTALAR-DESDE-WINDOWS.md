@@ -11,7 +11,11 @@ Estado verificado el 2026-09-30: **compilación para dispositivo y simulador exi
 
 ## Firmar e instalar desde Windows
 
-La [guía oficial de AltStore Classic para Windows](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows) describe instalar iTunes/iCloud según sus requisitos, AltServer desde su enlace oficial, conectar y desbloquear el iPhone, confiar en el PC e instalar AltStore. No se descargaron ni instalaron estas herramientas aquí.
+La [guía oficial de AltStore Classic para Windows](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows) describe instalar iTunes/iCloud según sus requisitos, AltServer desde su enlace oficial, conectar y desbloquear el iPhone, confiar en el PC e instalar AltStore. Los instaladores se preparan localmente en `installers/`, una carpeta excluida de Git; todavía no se ejecutaron. Apple Devices ya está instalado en el PC y no se ha modificado.
+
+El ZIP de AltServer descargado desde el enlace de esa guía contiene `setup.exe` y `altinstaller.msi`. Ambos aparecen `NotSigned` en Get-AuthenticodeSignature; la procedencia observada es el enlace oficial, pero no hay firma Authenticode que verifique al editor. No se afirma ausencia de malware.
+
+La instalación de herramientas requiere completar sus asistentes y aceptar personalmente sus términos. Después conecta el iPhone por USB, desbloquéalo y acepta «Confiar en este ordenador». Introduce tu cuenta Apple exclusivamente en la herramienta al firmar. En AltStore, importa `artifacts/XuperStudy-unsigned.ipa`. No se puede completar la firma sin el dispositivo y tu intervención.
 
 La IPA compilada y revisada está en `artifacts/XuperStudy-unsigned.ipa`. AltStore Classic puede firmarla para tu dispositivo e instalarla mediante su función de importar IPA. Tu cuenta Apple y confirmaciones se introducen personalmente en la herramienta: no las envíes a este chat ni las guardes en GitHub. La compatibilidad del firmador y los requisitos del teléfono deben comprobarse con tu versión real de iOS. Para iOS 16+ la guía requiere Developer Mode.
 
