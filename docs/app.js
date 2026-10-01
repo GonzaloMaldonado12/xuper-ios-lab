@@ -42,18 +42,7 @@ function render() {
     : `<p class="msg">${esc(tab === 'fav' ? 'Sin favoritos.' : msg || 'Sin resultados.')}</p>`;
 }
 function play(id, title, srcs) {
-  const p = $('#player'), v = $('#v');
-  p.hidden = false; $('#ptitle').textContent = title;
-  $('#srcs').innerHTML = srcs.map((s, i) => `<button class="g" data-i="${i}">${esc(s.label)}</button> `).join('');
-  const set = i => {
-    const u = trusted(srcs[i].url); if (!u) return;
-    v.src = u.href;
-    v.onloadedmetadata = () => { const s = prog[id]; if (s > 1 && s < v.duration - 5) v.currentTime = s; };
-    v.play().catch(() => {});
-  };
-  $('#srcs').onclick = e => { const i = e.target.dataset.i; if (i != null) set(+i); };
-  v.ontimeupdate = () => { prog[id] = v.currentTime; sv('prog', prog); };
-  if (srcs.length) set(0);
+  Player.open(title, srcs, { resume: prog[id] || 0, onTime: t => { prog[id] = t; sv('prog', prog); } });
 }
 function detail(t) {
   const m = $('#main'), eps = t.episodes || [];
@@ -70,6 +59,5 @@ $('#q').oninput = render;
 $('#q').onkeydown = e => { if (e.key === 'Enter') e.target.blur(); };
 addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#player').hidden) $('#close').click(); });
 $('#main').onclick = e => { const c = e.target.closest('[data-id]'); if (c) detail(titles.find(t => t.id === c.dataset.id)); };
-$('#close').onclick = () => { $('#v').pause(); $('#v').removeAttribute('src'); $('#player').hidden = true; };
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 render(); if (url) load();
