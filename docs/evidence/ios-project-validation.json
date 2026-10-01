@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-30T22:42:11.380898+00:00",
+  "structuralChecksPassed": true,
+  "swiftSources": 4,
+  "minimumTarget": "13.0",
+  "xcodeObjects": 26,
+  "catalogConnected": false,
+  "swiftCompiled": false,
+  "deviceTested": false,
+  "ipaSigned": false,
+  "limits": "Validación de archivos, referencias y plist. No verifica semántica de Swift, Xcode, disponibilidad SDK, reproducción ni seguridad exhaustiva."
+}

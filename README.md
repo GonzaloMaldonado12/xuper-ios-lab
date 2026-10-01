@@ -1,5 +1,7 @@
 # Reconstrucción nativa para iPhone 11
 
+Para retomar el trabajo en Claude: [estado completo y pendientes](HANDOFF-CLAUDE.md).
+
 Proyecto propio Swift/SwiftUI/AVKit en `XuperStudy.xcodeproj`, mínimo iOS 13.0. No es código iOS extraído del APK, una versión oficial ni un cliente conectado al servicio de Xuper. El 2026-09-30 pasó la compilación para dispositivo y simulador en Xcode 16.4 y arrancó en un simulador de iPhone 11 con iOS 18.5. Hay una IPA sin firma; todavía no se instaló ni probó en un teléfono físico. No se garantiza compatibilidad con todas las versiones futuras de iOS.
 
 Incluye navegación de inicio/películas/series/directos, búsqueda, fichas, favoritos, capítulos, historial por título o episodio, selección de fuentes de calidad, AVPlayerViewController con controles nativos y preferencia por pistas de subtítulos españoles disponibles. Favoritos, progreso y URL de catálogo se guardan en UserDefaults de esta app. Sin dependencias de terceros ni reutilización de binarios, claves o telemetría del APK. No requiere cámara, micrófono, contactos, instalación de paquetes ni acceso global al almacenamiento. Las conexiones aceptadas son HTTPS; no se habilitan excepciones globales de ATS. Esto describe el diseño, no una auditoría que certifique seguridad.

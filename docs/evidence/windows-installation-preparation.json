@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-30T22:53:11.9990381Z",
+  "source": "https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows",
+  "installed": false,
+  "deviceDetected": false,
+  "note": "No iPhone appeared in the scoped PnP query; this is not proof that a device cannot connect.",
+  "files": [
+    {
+      "name": "AltInstaller.zip",
+      "bytes": 12383244,
+      "sha256": "E130EAEEA7957BEDCCA99743A799460BD2001E07B177EC49C67E4CDFBAEDA553",
+      "authenticode": "UnknownError",
+      "publisher": null
+    },
+    {
+      "name": "setup.exe",
+      "bytes": 532480,
+      "sha256": "DA3054755A9A852FD3E169F61BE9F893A27A15CF55C3A33BFFE104762BF8DF17",
+      "authenticode": "NotSigned",
+      "publisher": null
+    },
+    {
+      "name": "altinstaller.msi",
+      "bytes": 12377600,
+      "sha256": "944186A28493B628A7702C514155140D530DFADC31F4279033AE576F1403CD5F",
+      "authenticode": "NotSigned",
+      "publisher": null
+    },
+    {
+      "name": "iTunes64Setup.exe",
+      "bytes": 202759648,
+      "sha256": "25B28905A81406A5EDBF482F7F3EE4831A8641D32D29DCEDA5D1EB3E8D534C08",
+      "authenticode": "Valid",
+      "publisher": "CN=Apple Inc., O=Apple Inc., L=Cupertino, S=California, C=US"
+    },
+    {
+      "name": "iCloudSetup.exe",
+      "bytes": 161146680,
+      "sha256": "4CFD20D13CDCE2B5C435F2DDAF4EE4C81D976461846BF3B954E8AF6CBCDEB9F7",
+      "authenticode": "Valid",
+      "publisher": "CN=Apple Inc., O=Apple Inc., L=Cupertino, S=California, C=US"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-09-30T22:51:08.0077403Z",
+  "repository": "https://github.com/GonzaloMaldonado12/xuper-ios-lab",
+  "visibility": "private",
+  "commit": "0d064423ce046eb9cd2c6accc87c383f10ebda6c",
+  "run": "https://github.com/GonzaloMaldonado12/xuper-ios-lab/actions/runs/36787317561",
+  "status": "success",
+  "artifactDownloaded": true,
+  "catalogConnected": false,
+  "installedOnDevice": false,
+  "artifactId": "11130003262",
+  "simulator": "iPhone 11 / iOS 18.5; launch and screenshot passed",
+  "physicalAndSimulatorCompilationPassed": true
+}

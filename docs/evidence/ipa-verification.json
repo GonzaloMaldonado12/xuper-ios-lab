@@ -1,0 +1,12 @@
+{
+  "artifactSha256": "bf4011ca7ec72e1b718af9b321d628e92a6cca48c159f5eb013c879405657c23",
+  "ipaSha256": "8078caf15005bde025834f3427feb6466f68bbc3bb55230d8dbe644f7d11b732",
+  "bundleId": "local.xuper.study",
+  "minimumOS": "13.0",
+  "binary": "Mach-O ARM64",
+  "ipaBytes": 146170,
+  "signedForDevice": false,
+  "catalogConnected": false,
+  "simulatorLaunchReported": true,
+  "installedOnDevice": false
+}
