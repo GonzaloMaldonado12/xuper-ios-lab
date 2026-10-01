@@ -27,3 +27,8 @@ Si solo tienes Windows: [compilación remota e instalación nativa](INSTALAR-DES
 Apple: [requisitos de Xcode/macOS](https://developer.apple.com/xcode/system-requirements/), [ejecutar en un dispositivo y firma](https://help.apple.com/xcode/mac/current/en.lproj/dev5a825a1ca.html), [pistas de subtítulos y audio](https://developer.apple.com/documentation/avfoundation/selecting-subtitles-and-alternative-audio-tracks), [UserDefaults y manifest de privacidad](https://developer.apple.com/documentation/foundation/userdefaults). Manifest de privacidad CA92.1 para preferencias propias: [reasons API](https://developer.apple.com/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitype).
 
 La validación local de Windows comprueba estructura de archivos/plists; no sustituye Swift compiler, Xcode, AVFoundation ni pruebas iOS. La elección de APK permanece sin dictamen de confianza; [análisis](../docs/XUPER-REVIEW.md).
+
+## Versión web para iPhone (PWA)
+
+Publicada desde `docs/` con GitHub Pages: https://gonzalomaldonado12.github.io/xuper-ios-lab/ . Instalación: Safari → Compartir → Agregar a pantalla de inicio. Cada push a `main` se despliega solo.
+Incluye búsqueda, favoritos, historial y continuar viendo, listas, copia de seguridad, reproductor (calidad HLS, fuente, subtítulos, idioma de audio, velocidad, PiP, AirPlay, maximizar). Sin catálogo ni servicio de Xuper: se configura una URL HTTPS de catálogo propio (ver `catalog-contract.example.json`; las fuentes admiten `subtitles` y `type: "hls"`).

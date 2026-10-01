@@ -34,3 +34,7 @@ nav button.on{color:var(--ac);font-weight:700}
 #menu{position:absolute;right:calc(var(--sa-r) + 12px);bottom:calc(var(--sa-b) + 70px);width:min(340px,calc(100% - 24px));max-height:70%;overflow:auto;background:rgba(24,24,32,.97);border-radius:16px;padding:8px;z-index:5;-webkit-user-select:none}
 #menu h3{margin:6px 8px 8px;font-size:15px;display:flex;align-items:center;gap:8px}#menu .row{display:flex;justify-content:space-between;width:100%;margin:4px 0;text-align:left}
 video::cue{font-size:1.05em}video::-webkit-media-controls{display:none!important}
+.bar{height:4px;background:#ffffff22;border-radius:2px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+.hrow{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}.hrow .card{flex:0 0 170px;scroll-snap-align:start}
+.seg{display:flex;gap:8px;margin:4px 0 12px}.seg button{flex:1;background:var(--panel);color:var(--mut)}.seg button.on{background:var(--ac);color:#000}
+main button.row{width:100%;justify-content:space-between}

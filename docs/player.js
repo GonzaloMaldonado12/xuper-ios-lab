@@ -45,7 +45,7 @@ const Player = (() => {
     v.addEventListener('timeupdate', () => {
       if (!scrub && v.duration) $('#seek').value = Math.round(v.currentTime / v.duration * 1000);
       $('#tc').textContent = fmt(v.currentTime);
-      if (opts.onTime) opts.onTime(v.currentTime);
+      if (opts.onTime) opts.onTime(v.currentTime, v.duration);
     });
     const seek = $('#seek');
     seek.addEventListener('input', () => { scrub = true; if (v.duration) $('#tc').textContent = fmt(seek.value / 1000 * v.duration); });
